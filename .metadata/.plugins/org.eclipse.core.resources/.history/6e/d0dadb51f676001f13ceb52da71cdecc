@@ -1,0 +1,64 @@
+package polymorphism;
+
+import org.springframework.stereotype.Component;
+
+@Component("tv")
+public class SamgsungTV implements TV {
+	
+	private int price;
+	
+	
+	
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+		System.out.println(" setPrice : " + price);
+	}
+
+	public SamgsungTV() {
+		System.out.println(" SamgsungTV constructor");
+	}
+	
+	public SamgsungTV(int price) {
+		System.out.println(" SamgsungTV constructor 2");
+		this.price = price;
+	}
+
+	@Override
+	public void powerOn() {
+		System.out.println(" SamgsungTV powerOn ");
+		
+	}
+
+	@Override
+	public void volumeUp() {
+		System.out.println(" SamgsungTV  volumeUp ");
+		
+	}
+
+	@Override
+	public void volumeDown() {
+		System.out.println(" SamgsungTV volumeDown ");
+		
+	}
+
+	@Override
+	public void powerOff() {
+		System.out.println(" SamgsungTV powerOff");
+		
+	}
+	
+	public void initMethod() {
+		System.out.println(" SamgsungTV init @@");
+	}
+	
+	public void destory() {
+		System.out.println(" SamgsungTV destory @@");
+		
+	}
+
+
+}

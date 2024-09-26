@@ -1,0 +1,48 @@
+package com.globalin.biz.board.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.globalin.biz.board.BoardService;
+import com.globalin.biz.board.BoardVO;
+
+@Service("boardService")
+public class BoardServiceImpl implements BoardService {
+
+	
+	@Autowired
+	private BoardDAO boardDao;
+	
+	@Override
+	public void insertBoar(BoardVO vo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateBoard(BoardVO vo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteBoard(BoardVO vo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public BoardVO getBoard(BoardVO vo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<BoardVO> getBoardList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

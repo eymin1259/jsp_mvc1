@@ -1,0 +1,49 @@
+<%@page import="com.globalin.biz.board.impl.BoardDAO"%>
+<%@page import="com.globalin.biz.board.BoardVO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+        
+<%@ page import="com.globalin.biz.user.impl.UserDAO" %>
+<%@ page import="com.globalin.biz.user.UserVO" %>
+<%
+
+request.setCharacterEncoding("utf-8");
+String title = request.getParameter("title");
+String writer = request.getParameter("writer");
+String content = request.getParameter("content");
+
+// db
+BoardVO vo = new BoardVO();
+vo.setTitle(title);
+vo.setContent(content);
+vo.setWriter(writer);
+
+BoardDAO dao = new BoardDAO();
+
+%>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+.content-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+</style>
+</head>
+<body class="content-center">
+
+<p> <%= title %></p>
+<p> <%= writer %></p>
+<p> <%= content %></p>
+
+
+</body>
+</html>

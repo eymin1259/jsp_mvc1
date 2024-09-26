@@ -1,0 +1,8 @@
+package com.globalin.biz.common;
+
+public class BeforeAdvice {
+
+	public void beforeLog() {
+		System.out.println("@@ BeforeAdvice : beforeLog");
+	}
+}

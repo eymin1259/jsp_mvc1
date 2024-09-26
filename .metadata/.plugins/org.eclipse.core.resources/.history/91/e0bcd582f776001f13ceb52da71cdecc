@@ -1,0 +1,68 @@
+package polymorphism;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component("samsung")
+public class SamgsungTV implements TV {
+	
+	private int price;
+	
+	@Autowired
+	private Speaker speaker;
+	
+	
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+		System.out.println(" setPrice : " + price);
+	}
+
+	public SamgsungTV() {
+		System.out.println(" SamgsungTV constructor");
+	}
+	
+	public SamgsungTV(int price) {
+		System.out.println(" SamgsungTV constructor 2");
+		this.price = price;
+	}
+
+	@Override
+	public void powerOn() {
+		System.out.println(" SamgsungTV powerOn ");
+		
+	}
+
+	@Override
+	public void volumeUp() {
+		System.out.print(" SamgsungTV =>  ");
+		this.speaker.volumUP();
+		
+	}
+
+	@Override
+	public void volumeDown() {
+		System.out.print(" SamgsungTV =>  ");
+		this.speaker.volumDown();
+	}
+
+	@Override
+	public void powerOff() {
+		System.out.println(" SamgsungTV powerOff");
+		
+	}
+	
+	public void initMethod() {
+		System.out.println(" SamgsungTV init @@");
+	}
+	
+	public void destory() {
+		System.out.println(" SamgsungTV destory @@");
+		
+	}
+
+
+}

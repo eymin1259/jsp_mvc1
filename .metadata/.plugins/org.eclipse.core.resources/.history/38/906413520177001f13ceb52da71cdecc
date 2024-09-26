@@ -1,0 +1,16 @@
+package com.globalin.biz.common;
+
+import java.sql.Connection;
+
+public class JDBCUtil {
+	private final String JDBC_DRIVER = "oracle.jdbc.driver.OracleDriver";
+	s
+	public static Connection getConnection() {
+		try {
+			Class.forName(JDBC_DRIVER);
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+}

@@ -1,0 +1,17 @@
+package polymorphism;
+
+public class TvUser {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BeanFactory fac = new BeanFactory();
+		TV tv = fac.getBean("samsung")
+		
+		tv.powerOn();
+		tv.volumeUp();
+		tv.volumeDown();
+		tv.powerOff();
+
+	}
+
+}

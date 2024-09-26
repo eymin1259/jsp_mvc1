@@ -1,0 +1,17 @@
+package polymorphism;
+
+public class SonySpeaker implements Speaker {
+
+	@Override
+	public void volumUP() {
+		System.out.println("SonySpeaker volumUP ");
+
+	}
+
+	@Override
+	public void volumDown() {
+		// TODO Auto-generated method stub
+		System.out.println("SonySpeaker volumDown ");
+	}
+
+}

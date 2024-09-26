@@ -1,0 +1,12 @@
+package polymorphism;
+
+public class BeanFactory {
+	
+	public TV getBean(String beanname) {
+		switch(beanname) {
+		
+		}
+		return null;
+	}
+
+}

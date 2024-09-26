@@ -1,0 +1,13 @@
+package polymorphism;
+
+public class BeanFactory {
+	
+	public TV getBean(String beanname) {
+		switch(beanname) {
+		case "samsung" : return new SamgsungTV();
+		case "lg" : return new LgTV();
+		}
+		return null;
+	}
+
+}

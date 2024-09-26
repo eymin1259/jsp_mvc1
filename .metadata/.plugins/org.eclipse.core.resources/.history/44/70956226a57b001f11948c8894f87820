@@ -1,0 +1,57 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@page import="com.globalin.biz.board.impl.BoardDAO"%>
+<%@page import="com.globalin.biz.board.BoardVO"%>    
+    
+    <%
+    
+    String seq = request.getParameter("seq");
+    
+    BoardVO vo = new BoardVO();
+    vo.setSeq(Integer.parseInt(seq));
+    BoardDAO dao = new BoardDAO();
+    BoardVO board = dao.getBoard(vo);
+    
+    
+    %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+.content-center {
+	display: flex;
+	flex-direction: column;
+	    align-items: center;
+	    justify-content:center;
+}
+</style>
+</head>
+<body class="content-center">
+
+
+	<h2>상세조회</h2>
+	<div>
+		<a href="logout_proc.jsp">로그아웃</a>
+	</div>
+	<hr>
+	
+	<form action="#" >
+	
+		<input type="hidden" name="seq" value="<%= board.getSeq()%>">
+		
+		
+		<table width="700" border="1">
+		
+			<tr>
+				<td width="100">제목</td>
+				<td><input type="text" name="title" value="<%= board.getTitle()%>"></td>
+			</tr>
+		</table>
+	</form>
+
+
+
+</body>
+</html>

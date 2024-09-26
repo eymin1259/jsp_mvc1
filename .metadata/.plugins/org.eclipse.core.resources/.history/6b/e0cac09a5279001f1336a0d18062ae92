@@ -1,0 +1,33 @@
+package com.globalin.biz.user.impl;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import com.globalin.biz.common.JDBCUtil;
+import com.globalin.biz.user.UserVO;
+
+public class UserDAO {
+
+	private Connection conn = null;
+	private PreparedStatement stmt = null;
+	private ResultSet rs = null;
+	
+	
+	private final String USER_GET = "select * from users where id = ? and password= ?";	
+	
+	
+	
+	public UserVO getUser(UserVO vo) {
+		UserVO user = null;
+		
+		try {
+			System.out.println("UserDAO -> getUser");
+			conn = JDBCUtil.getConnection();
+			smtm = conn.prepareStatement(USER_GET);
+		}
+		
+		
+		return user;
+	}
+} 

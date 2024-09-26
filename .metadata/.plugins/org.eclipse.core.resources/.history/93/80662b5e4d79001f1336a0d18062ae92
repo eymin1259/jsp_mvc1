@@ -1,0 +1,43 @@
+package com.globalin.biz.board.impl;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+
+import com.globalin.biz.board.BoardVO;
+
+@Service
+public class BoardServiceImpl implements BoardService {
+
+	@Override
+	public void insertBoar(BoardVO vo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateBoard(BoardVO vo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteBoard(BoardVO vo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public BoardVO getBoard(BoardVO vo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<BoardVO> getBoardList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

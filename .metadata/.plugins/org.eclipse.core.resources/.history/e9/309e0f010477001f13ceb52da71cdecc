@@ -1,0 +1,37 @@
+package com.globalin.biz.board.impl;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import com.globalin.biz.board.BoardVO;
+
+public class BoardDAO {
+
+	private Connection conn = null;
+	private PreparedStatement stmt = null;
+	private ResultSet rs = null;
+	
+	
+	private final String BOARD_INSERT = "insert into board values(?,?,?,?,?,?)";
+	private final String BOARD_UPDATE = "delete from board where ";
+	private final String BOARD_DELETE = "";
+	private final String BOARD_GET = "";
+	private final String BOARD_LIST = "";
+	
+	public void insertBoard(BoardVO vo) {
+		
+	}
+	
+	public void updateBoard(BoardVO vo) {
+		
+	}
+	
+	public void deleteBoard(BoardVO vo) {
+		
+	}
+	
+	public void getBoard(BoardVO vo) {
+		
+	}
+}

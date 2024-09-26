@@ -1,0 +1,18 @@
+package com.globalin.biz.user.impl;
+
+import com.globalin.biz.user.UserService;
+import com.globalin.biz.user.UserVO;
+
+public class UserServiceImpl implements UserService {
+
+	
+	
+	private UserDAO userDAO;
+	
+	
+	@Override
+	public UserVO getUser() {
+		return null;
+	}
+
+}

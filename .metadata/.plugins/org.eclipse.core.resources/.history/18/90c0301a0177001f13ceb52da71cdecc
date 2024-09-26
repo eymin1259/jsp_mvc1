@@ -1,0 +1,8 @@
+package com.globalin.biz.common;
+
+public class JDBCUtil {
+
+	public static Connection getConnection() {
+		
+	}
+}

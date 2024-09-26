@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=BoardWeb/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;polymorphism{TV.java[TV" modifiers="513" timestamp="1726725623087"/>
+<typeInfo handle="=BoardWeb/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;polymorphism{Speaker.java[Speaker" modifiers="513" timestamp="1726798515816"/>
+<typeInfo handle="=BoardWeb/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.globalin.biz.board{BoardService.java[BoardService" modifiers="513" timestamp="1727055836139"/>
+<typeInfo handle="=BoardWeb/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.globalin.biz.user{UserService.java[UserService" modifiers="513" timestamp="1727060248735"/>
+<typeInfo handle="=BoardWeb/C:\/Users\/USER\/.m2\/repository\/org\/springframework\/spring-jdbc\/5.0.7.RELEASE\/spring-jdbc-5.0.7.RELEASE.jar=/maven.pomderived=/true=/=/org.eclipse.jst.component.dependency=/\/WEB-INF\/lib=/=/maven.pomderived=/true=/=/org.eclipse.jst.component.archivename=/spring-jdbc-5.0.7.RELEASE.jar=/=/maven.groupId=/org.springframework=/=/maven.artifactId=/spring-jdbc=/=/maven.version=/5.0.7.RELEASE=/=/maven.scope=/compile=/&lt;org.springframework.jdbc.core(RowMapper.class[RowMapper" modifiers="1537" timestamp="1727225377102"/>
+</typeInfoHistroy>

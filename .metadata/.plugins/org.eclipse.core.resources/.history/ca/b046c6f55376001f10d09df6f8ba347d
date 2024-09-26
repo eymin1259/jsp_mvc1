@@ -1,0 +1,33 @@
+package polymorphism;
+
+public class SamgsungTV implements TV {
+
+	@Override
+	public void powerOn() {
+		System.out.println(" SamgsungTV powerOn ");
+		
+	}
+
+	@Override
+	public void volumeUp() {
+		System.out.println(" SamgsungTV  volumeUp ");
+		
+	}
+
+	@Override
+	public void volumeDown() {
+		System.out.println(" SamgsungTV volumeDown ");
+		
+	}
+
+	@Override
+	public void powerOff() {
+		System.out.println(" SamgsungTV powerOff");
+		
+	}
+	
+	public void initMethod() {
+		
+	}
+
+}

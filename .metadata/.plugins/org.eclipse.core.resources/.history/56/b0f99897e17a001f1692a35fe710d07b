@@ -1,0 +1,59 @@
+package com.globalin.biz.board.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.globalin.biz.board.BoardService;
+import com.globalin.biz.board.BoardVO;
+import com.globalin.biz.common.Log4jAdvice;
+import com.globalin.biz.common.LogAdvice;
+
+@Service("boardService")
+public class BoardServiceImpl implements BoardService {
+
+	
+	@Autowired
+	private BoardDAO boardDao;
+	
+	private LogAdvice log;
+	
+	private Log4jAdvice logging;
+	
+	public BoardServiceImpl() {
+		
+		logging = new Log4jAdvice();
+		log = new LogAdvice();
+	}
+	
+	@Override
+	public void insertBoar(BoardVO vo) {
+		boardDao.insertBoard(vo);
+		
+	}
+
+	@Override
+	public void updateBoard(BoardVO vo) {
+		boardDao.updateBoard(vo);
+		
+	}
+
+	@Override
+	public void deleteBoard(BoardVO vo) {
+		boardDao.deleteBoard(vo);
+		
+	}
+
+	@Override
+	public BoardVO getBoard(BoardVO vo) {
+		return boardDao.getBoard(vo);
+	}
+
+	@Override
+	public List<BoardVO> getBoardList() {
+
+		return boardDao.getBoardList();
+	}
+
+}

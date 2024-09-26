@@ -1,0 +1,20 @@
+package com.globalin.ioc.injection;
+
+import java.util.List;
+import java.util.Set;
+
+public class CollectionBean {
+	private List<String> addressList;
+	private Set<String> addressSet;
+
+	public List<String> getAddressList() {
+		return addressList;
+	}
+
+	public void setAddressList(List<String> addressList) {
+		this.addressList = addressList;
+	}
+	
+	
+	
+}
