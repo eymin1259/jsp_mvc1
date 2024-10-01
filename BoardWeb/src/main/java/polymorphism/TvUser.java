@@ -3,38 +3,27 @@ package polymorphism;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
-public class TvUser {
+public class TVUser {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
-
+		// 1. Spring 컨테이너를 구동한다.
+		AbstractApplicationContext factory =
+				new GenericXmlApplicationContext("applicationContext.xml");
 		
-		// BeanFactory fac = new BeanFactory();
-		// TV tv = fac.getBean("lg");
 		
-
-	
+		// 2. Spring 컨테이너로부터 필요한 객체를 요청(Lookup)함
 		
-		AbstractApplicationContext factory = new GenericXmlApplicationContext("applicationContext.xml");
+		TV tv =(TV) factory.getBean("tv");
 		
-		TV tv1 = (TV) factory.getBean("samsung");
-
-		
-		tv1.powerOn();
-		tv1.volumeUp();
-		tv1.volumeDown();
-		tv1.powerOff();
-		
-		TV tv2 = (TV) factory.getBean("lg");
-
-		
-		tv2.powerOn();
-		tv2.volumeUp();
-		tv2.volumeDown();
-		tv2.powerOff();
-
+		tv.powerOn();
+		tv.volumeUp();
+		tv.volumeDown();
+		tv.powerOff();
+       
+         // 3. Spring 컨테이너를 종료함
 		factory.close();
+			
 	}
 
 }

@@ -2,6 +2,7 @@ package polymorphism;
 
 public interface Speaker {
 
-	public void volumUP();
-	public void volumDown();
+	public void volumeUp();
+	public void volumeDown();
+	
 }

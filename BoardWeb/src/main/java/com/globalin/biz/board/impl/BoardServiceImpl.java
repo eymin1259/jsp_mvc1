@@ -13,51 +13,51 @@ import com.globalin.biz.common.LogAdvice;
 @Service("boardService")
 public class BoardServiceImpl implements BoardService {
 
-	
-//	@Autowired
-//	private BoardDAO boardDao;
-	
 	@Autowired
-	private BoardDAOSpring boardDao;
+	private BoardDAOSpring boardDAO;
+	//private BoardDAO boardDAO;
+	//private LogAdvice log;
+	//private Log4jAdvice log;
 	
-	private LogAdvice log;
-	
-	private Log4jAdvice logging;
 	
 	public BoardServiceImpl() {
-		
-		logging = new Log4jAdvice();
-		log = new LogAdvice();
+	   //log = new Log4jAdvice();
 	}
 	
 	@Override
-	public void insertBoar(BoardVO vo) {
-		boardDao.insertBoard(vo);
-
-		
+	public void insertBoard(BoardVO vo) {
+		//log.printLogging();
+		/*
+		if(vo.getSeq() ==0) {
+			throw new IllegalArgumentException("0번 글은 등록할 수 없습니다.");
+		}
+		*/
+		//boardDAO.insertBoard(vo);
+		boardDAO.insertBoard(vo);
 	}
 
 	@Override
 	public void updateBoard(BoardVO vo) {
-		boardDao.updateBoard(vo);
-		
+		//log.printLogging();
+	   boardDAO.updateBoard(vo);
 	}
 
 	@Override
 	public void deleteBoard(BoardVO vo) {
-		boardDao.deleteBoard(vo);
-		
+		//log.printLogging();
+	  boardDAO.deleteBoard(vo);
 	}
 
 	@Override
 	public BoardVO getBoard(BoardVO vo) {
-		return boardDao.getBoard(vo);
+		//log.printLogging();
+		return boardDAO.getBoard(vo);
 	}
 
 	@Override
-	public List<BoardVO> getBoardList() {
-
-		return boardDao.getBoardList();
+	public List<BoardVO> getBoardList(BoardVO vo) {
+		//log.printLogging();
+		return boardDAO.getBoardList(vo);
 	}
 
 }

@@ -1,67 +1,81 @@
 package com.globalin.biz.common;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.*;
 
 public class JDBCUtil {
-	private final static String JDBC_DRIVER = "oracle.jdbc.driver.OracleDriver";
-	private final static String JDBC_URL = "jdbc:oracle:thin:@localhost:1521:orcl";
-	private final static String USER = "scott";
-	private final static String PASS = "tiger";
-	
+
 	public static Connection getConnection() {
+		
 		try {
-			Class.forName(JDBC_DRIVER);
-			return DriverManager.getConnection(JDBC_URL, USER, PASS);
-		} catch(Exception e) {
+	           Class.forName("oracle.jdbc.driver.OracleDriver");
+	           return DriverManager.getConnection(
+	        		   "jdbc:oracle:thin:@localhost:1521:orcl", "scott", "tiger");
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return null;
 	}
 	
-	public static void close(PreparedStatement stmt, Connection conn)  {
+	
+	public static void close(PreparedStatement stmt, Connection conn) {
+		
 		if(stmt != null) {
 			try {
-				if(!stmt.isClosed()) {
+				if(!stmt.isClosed())
 					stmt.close();
-				}
-			} catch (Exception e) {
+			}catch(Exception e) {
 				e.printStackTrace();
-			} finally {
+			}finally {
 				stmt = null;
 			}
 		}
 		
 		if(conn != null) {
 			try {
-				if(!conn.isClosed()) {
+				if(!conn.isClosed())
 					conn.close();
-				}
-			} catch (Exception e) {
+			}catch(Exception e) {
 				e.printStackTrace();
-			} finally {
+			}finally {
 				conn = null;
 			}
 		}
 	}
 	
-	public static void close( PreparedStatement stmt, Connection conn, ResultSet rs)  {
-
-		close(stmt, conn);
+	
+public static void close(ResultSet rs,  PreparedStatement stmt, Connection conn) {
 		
-		if(rs != null) {
-			try {
-				if(!rs.isClosed()) {
-					rs.close();
-				}
-			} catch (Exception e) {
-				e.printStackTrace();
-			} finally {
-				rs = null;
-			}
+	if(rs != null) {
+		try {
+			if(!rs.isClosed())
+				rs.close();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			rs = null;
 		}
 	}
 	
+		if(stmt != null) {
+			try {
+				if(!stmt.isClosed())
+					stmt.close();
+			}catch(Exception e) {
+				e.printStackTrace();
+			}finally {
+				stmt = null;
+			}
+		}
+		
+		if(conn != null) {
+			try {
+				if(!conn.isClosed())
+					conn.close();
+			}catch(Exception e) {
+				e.printStackTrace();
+			}finally {
+				conn = null;
+			}
+		}
+	}
 }
