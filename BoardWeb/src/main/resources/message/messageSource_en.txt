@@ -1,0 +1,21 @@
+#login.jsp
+message.user.login.title=LOGIN
+message.user.login.id=ID
+message.user.login.password=PASSWORD
+message.user.login.loginBtn=Log-in
+message.user.login.language.en=English
+message.user.login.language.ko=Korean
+message.user.login.language.jp=Japan
+
+#getboard.jsp
+message.board.list.mainTitle=BOARD-LIST
+message.board.list.welcomeMsg=welcome to my board
+message.board.list.search.condition.title=TITLE
+message.board.list.search.condition.content=CONTENT
+message.board.list.search.condition.btn=Search
+message.board.list.table.head.seq=seq
+message.board.list.table.head.title=title
+message.board.list.table.head.writer=writer
+message.board.list.table.head.regdate=date
+message.board.list.table.head.count=count
+message.board.list.link.insertBoard=Insert Board

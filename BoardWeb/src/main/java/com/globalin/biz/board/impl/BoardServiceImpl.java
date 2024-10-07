@@ -3,6 +3,7 @@ package com.globalin.biz.board.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import com.globalin.biz.board.BoardService;
@@ -10,12 +11,14 @@ import com.globalin.biz.board.BoardVO;
 import com.globalin.biz.common.Log4jAdvice;
 import com.globalin.biz.common.LogAdvice;
 
-@Service("boardService")
+@Service
+@Primary
 public class BoardServiceImpl implements BoardService {
 
 	@Autowired
 	private BoardDAOSpring boardDAO;
-	//private BoardDAO boardDAO;
+//	@Autowired
+//	private BoardDAO boardDAO;
 	//private LogAdvice log;
 	//private Log4jAdvice log;
 	

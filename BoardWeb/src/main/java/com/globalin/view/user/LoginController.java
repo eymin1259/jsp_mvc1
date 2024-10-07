@@ -1,36 +1,45 @@
 package com.globalin.view.user;
-//
-//import javax.servlet.http.HttpServletRequest;
-//import javax.servlet.http.HttpServletResponse;
-//
-//import org.springframework.web.servlet.ModelAndView;
-//import org.springframework.web.servlet.mvc.Controller;
+
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.globalin.biz.user.UserVO;
 import com.globalin.biz.user.impl.UserDAO;
 
-
 @Controller
-public class LoginController  {
+public class LoginController {
 
+	@RequestMapping(value = "/login.do", method = RequestMethod.POST)
+	public String login(UserVO vo, UserDAO userDAO, HttpSession session) {
 
-	@RequestMapping("/login.do")
-	public String login(UserVO vo, UserDAO userDAO) {
+		if(vo.getId() == null || vo.getId().equals("")) {
+			throw new IllegalArgumentException("Error empty id, id가 입력 x");
+		}
 		
-		System.out.println("로그인 처리");
+		
+		UserVO user = userDAO.getUser(vo);
+		
+		System.out.println("로그인 인증");
+		if (user != null) {
+			session.setAttribute("userName", user.getName());
+			return "getBoardList.do";
+		} else {
+			return "login.jsp";
+		}
 
-		   UserVO user = userDAO.getUser(vo);
-		   
-		  
-		   if(user != null) {
-			   return "getBoardList.do";
-		   }else {
-			  return "login.jsp";
-		   }
-		   
+	}
+
+	@RequestMapping(value = "/login.do", method = RequestMethod.GET)
+	public String loginView(@ModelAttribute("user") UserVO vo) {
+
+		System.out.println("로그인 뷰");
+		vo.setId("test");
+		return "login.jsp";
+
 	}
 
 }
